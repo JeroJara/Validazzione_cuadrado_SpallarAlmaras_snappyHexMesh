@@ -1,0 +1,62 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  13
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    format      ascii;
+    class       dictionary;
+    location    "system";
+    object      fvSolution;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+solvers
+{
+    "p|pFinal"
+    {
+        solver          GAMG;
+        smoother        DICGaussSeidel; // Añadido para corregir el error
+        tolerance       1e-6;
+        relTol          0.01;
+    }
+
+    "U|UFinal|nuTilda|nuTildaFinal"
+    {
+        solver          smoothSolver;
+        smoother        GaussSeidel;
+        tolerance       1e-6;
+        relTol          0.1;
+    }
+}
+
+PIMPLE
+{
+    nOuterCorrectors         2;
+    nCorrectors              2;
+    nNonOrthogonalCorrectors 2;
+}
+
+potentialFlow
+{
+    nNonOrthogonalCorrectors 10;
+}
+
+relaxationFactors
+{
+    // Nota: En simulación transitoria pura (PIMPLE), los factores de relajación 
+    // suelen comentarse o ser 1.0 para no ralentizar la física temporal.
+    p               1.0;
+    U               1.0;
+    nuTilda         1.0;
+}
+
+cache
+{
+    grad(U);
+}
+
+// ************************************************************************* //

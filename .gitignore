@@ -1,0 +1,11 @@
+# Ignorar carpetas numéricas de pasos de tiempo (ej. 1, 2.5, 100, etc.)
+[0-9]*
+
+# Pero NO ignores la carpeta 0 (condiciones iniciales)
+!0/
+
+# Ignorar mallas generadas y archivos dinámicos
+constant/polyMesh/
+*.foam
+*.OpenFOAM
+log.*

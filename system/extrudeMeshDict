@@ -1,0 +1,36 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+=========                 |
+\\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+ \\    /   O peration     |
+  \\  /    A nd           |
+   \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    format      ascii;
+    class       dictionary;
+    object      extrudeMeshDict;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+constructFrom   mesh;
+sourceCase      ".";
+
+sourcePatches   (back); 
+exposedPatchName front;
+
+extrudeModel    linearNormal;
+
+linearNormalCoeffs
+{
+    thickness       0.02;
+    nLayers         1;
+    expansionRatio  1;
+}
+
+flipNormals     false;
+
+// CORREGIDO: Requerido obligatoriamente por OpenFOAM 13
+mergeFaces      false; 
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
