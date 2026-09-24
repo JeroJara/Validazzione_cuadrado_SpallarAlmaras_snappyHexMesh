@@ -23,15 +23,15 @@ startTime       0;
 
 stopAt          endTime;
 
-endTime         8.5;
+endTime         5;
 
 deltaT          0.005;  
 
 writeControl    timeStep;
 
-writeInterval   1;
+writeInterval   1000;
 
-purgeWrite      0;
+purgeWrite      2;
 
 writeFormat     binary;
 
@@ -59,13 +59,13 @@ functions
         writeInterval   1;
         patches         ("cubo");
         rho             rhoInf;
-        rhoInf          1.2;
+        rhoInf          1.225;
         magUInf         25;
         CofR            (0 0 0);
         liftDir         (0 1 0);
         dragDir         (1 0 0);
         pitchAxis       (0 0 1);
-        Aref            0.0012;
+        Aref            0.00006;
         lRef            0.06;
         log             yes;
     }
