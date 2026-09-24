@@ -1,0 +1,86 @@
+solid solid
+ facet normal -0.92388 0.382683 0
+  outer loop
+   vertex -0.0162359 0.0391969 1.5
+   vertex -0.0162359 0.0391969 -1.5
+   vertex -0.0391969 -0.0162359 -1.5
+  endloop
+ endfacet
+ facet normal -0.92388 0.382683 0
+  outer loop
+   vertex -0.0391969 -0.0162359 -1.5
+   vertex -0.0391969 -0.0162359 1.5
+   vertex -0.0162359 0.0391969 1.5
+  endloop
+ endfacet
+ facet normal -0.382683 -0.92388 -0
+  outer loop
+   vertex -0.0391969 -0.0162359 1.5
+   vertex -0.0391969 -0.0162359 -1.5
+   vertex 0.0162359 -0.0391969 -1.5
+  endloop
+ endfacet
+ facet normal -0.382683 -0.92388 0
+  outer loop
+   vertex 0.0162359 -0.0391969 -1.5
+   vertex 0.0162359 -0.0391969 1.5
+   vertex -0.0391969 -0.0162359 1.5
+  endloop
+ endfacet
+ facet normal 0.92388 -0.382683 0
+  outer loop
+   vertex 0.0162359 -0.0391969 1.5
+   vertex 0.0162359 -0.0391969 -1.5
+   vertex 0.0391969 0.0162359 -1.5
+  endloop
+ endfacet
+ facet normal 0.92388 -0.382683 0
+  outer loop
+   vertex 0.0391969 0.0162359 -1.5
+   vertex 0.0391969 0.0162359 1.5
+   vertex 0.0162359 -0.0391969 1.5
+  endloop
+ endfacet
+ facet normal 0.382683 0.92388 0
+  outer loop
+   vertex 0.0391969 0.0162359 1.5
+   vertex 0.0391969 0.0162359 -1.5
+   vertex -0.0162359 0.0391969 -1.5
+  endloop
+ endfacet
+ facet normal 0.382683 0.92388 -0
+  outer loop
+   vertex -0.0162359 0.0391969 -1.5
+   vertex -0.0162359 0.0391969 1.5
+   vertex 0.0391969 0.0162359 1.5
+  endloop
+ endfacet
+ facet normal 0 0 1
+  outer loop
+   vertex 0.0391969 0.0162359 1.5
+   vertex -0.0162359 0.0391969 1.5
+   vertex -0.0391969 -0.0162359 1.5
+  endloop
+ endfacet
+ facet normal -0 0 1
+  outer loop
+   vertex -0.0391969 -0.0162359 1.5
+   vertex 0.0162359 -0.0391969 1.5
+   vertex 0.0391969 0.0162359 1.5
+  endloop
+ endfacet
+ facet normal 0 0 -1
+  outer loop
+   vertex 0.0391969 0.0162359 -1.5
+   vertex 0.0162359 -0.0391969 -1.5
+   vertex -0.0391969 -0.0162359 -1.5
+  endloop
+ endfacet
+ facet normal 0 0 -1
+  outer loop
+   vertex -0.0391969 -0.0162359 -1.5
+   vertex -0.0162359 0.0391969 -1.5
+   vertex 0.0391969 0.0162359 -1.5
+  endloop
+ endfacet
+endsolid solid

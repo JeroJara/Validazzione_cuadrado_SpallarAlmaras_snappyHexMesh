@@ -13,7 +13,7 @@ FoamFile
 }
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
-surfaces ("cubo.stl");
+surfaces ("cubFstRot.stl");
 
 includedAngle 150;
 

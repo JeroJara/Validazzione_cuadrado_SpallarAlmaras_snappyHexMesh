@@ -30,7 +30,7 @@ geometry
     cubo
     {
         type triSurfaceMesh;
-        file "cubo.stl";
+        file "cubFstRot.stl";
     }
     refinementBox
     {

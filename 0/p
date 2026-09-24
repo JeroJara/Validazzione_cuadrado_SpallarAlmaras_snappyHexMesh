@@ -39,11 +39,11 @@ boundaryField
     }
     front
     {
-        type            zeroGradient;
+        type            empty;
     }
     back
     {
-        type            zeroGradient;
+        type            empty;
     }
     cubo
     {
