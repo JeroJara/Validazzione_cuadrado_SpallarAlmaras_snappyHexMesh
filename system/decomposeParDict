@@ -16,14 +16,8 @@ FoamFile
 
 numberOfSubdomains  8;
 
-decomposer      hierarchical;
-distributor     ptscotch;
+method              scotch;  // <--- Cambiado y corregido con punto y coma
 
-hierarchicalCoeffs
-{
-    n               (4 2 1);
-    order           xyz;
-}
-
+// Las líneas de hierarchical y ptscotch se eliminan porque scotch es automático
 
 // ************************************************************************* //

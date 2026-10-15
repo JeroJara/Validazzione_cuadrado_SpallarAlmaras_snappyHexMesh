@@ -23,21 +23,28 @@ boundaryField
     inlet
     {
         type            fixedValue;
-        value           uniform 1e-5;
+        value           uniform 4.5e-5; // Pon el valor de nuTilda de tu flujo libre
     }
     outlet
     {
         type            zeroGradient;
     }
+
+    // CAMBIA ESTO: En lugar de funciones de pared, usa zeroGradient o slip
     bottomWall
     {
-        type             fixedValue;
-        value            uniform 0;
+        type            zeroGradient; 
     }
     topWall
     {
-        type             fixedValue;
-        value            uniform 0;
+        type            zeroGradient;
+    }
+
+    // El cubo requiere su propia condición fija en la superficie sólida
+    cubo
+    {
+        type            nutkWallFunction;
+        value           uniform 0; // El solucionador modificará este valor dinámicamente
     }
     front
     {
@@ -47,11 +54,7 @@ boundaryField
     {
         type            empty;
     }
-    cubo
-    {
-        type             fixedValue;
-        value            uniform 0;
-    }
 }
+
 
 // ************************************************************************* //

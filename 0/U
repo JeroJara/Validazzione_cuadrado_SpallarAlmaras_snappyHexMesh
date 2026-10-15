@@ -31,11 +31,11 @@ boundaryField
     }
     bottomWall
     {
-        type            noSlip;
+        type            slip ;
     }
     topWall
     {
-        type            noSlip;
+        type            slip ;
     }
     front
     {

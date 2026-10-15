@@ -47,12 +47,12 @@ boundary
     }
     bottomWall
     {
-        type wall;
+        type patch;
         faces ( (0 1 5 4) );
     }
     topWall
     {
-        type wall;
+        type patch;
         faces ( (3 7 6 2) );
     }
     front

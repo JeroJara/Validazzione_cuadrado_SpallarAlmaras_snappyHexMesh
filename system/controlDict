@@ -29,7 +29,7 @@ deltaT          0.005;
 
 writeControl    timeStep;
 
-writeInterval   1000;
+writeInterval   10;
 
 purgeWrite      2;
 
@@ -68,6 +68,13 @@ functions
         Aref            0.00006;
         lRef            0.06;
         log             yes;
+    }
+        yPlus
+    {
+        type            yPlus;
+        libs            ("libfieldFunctionObjects.so");
+        writeControl    writeTime;
+        patches         ("cubo");  
     }
 }
 

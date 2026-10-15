@@ -30,14 +30,23 @@ boundaryField
         type            calculated;
         value           uniform 0;
     }
+    
+    // CAMBIA ESTO: Quita la función de pared y pon 'calculated' o 'slip'
     bottomWall
     {
-        type            nutkWallFunction;
+        type            calculated; 
         value           uniform 0;
     }
     topWall
     {
-        type            nutkWallFunction;
+        type            calculated;
+        value           uniform 0;
+    }
+
+    // Tu cubo es el único sólido real con fricción
+    cubo 
+    {
+        type            nutkWallFunction; // O la función de pared que uses para Spalart-Allmaras
         value           uniform 0;
     }
     front
@@ -48,11 +57,7 @@ boundaryField
     {
         type            empty;
     }
-    cubo
-    {
-        type            nutkWallFunction;
-        value           uniform 0;
-    }
 }
+
 
 // ************************************************************************* //

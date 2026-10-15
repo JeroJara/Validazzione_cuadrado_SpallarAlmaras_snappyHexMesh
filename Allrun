@@ -1,0 +1,24 @@
+#!/bin/bash
+# Detener el script inmediatamente si algún comando falla
+set -e
+
+# Cargar las herramientas y comandos oficiales de OpenFOAM
+. ${WM_PROJECT_DIR:?}/bin/tools/RunFunctions
+
+# 1. LIMPIEZA INICIAL: Borra ejecuciones en paralelo anteriores
+rm -rf processor*
+rm -f log.*
+
+# 2. PARALELO: Divide tu malla 2D actual usando tu nuevo decomposeParDict
+echo "Dividiendo la malla actual en 8 subdominios..."
+runApplication decomposePar -overwrite
+
+# 3. SOLUCIONADOR: Corre foamRun explotando tus 8 núcleos
+echo "Lanzando simulación en paralelo con 8 núcleos..."
+runParallel foamRun
+
+# 4. RECONSTRUCCIÓN: Une los trozos de malla al finalizar para ver los resultados unidos
+echo "Simulación completada. Reconstruyendo tiempos..."
+runApplication reconstructPar -latestTime
+
+echo "¡Todo el proceso ha terminado con éxito!"
